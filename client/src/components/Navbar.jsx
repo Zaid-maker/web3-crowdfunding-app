@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 //import { useStateContext } from '../context';
-//import { CustomButton } from './';
+import { CustomButton } from './';
 import { logo, menu, search, thirdweb } from "../assets";
 import { navlinks } from "../constants";
 
@@ -29,6 +29,12 @@ const Navbar = () => {
       </div>
 
       <div className="sm:flex hidden flex-row justify-end gap-4">
+        <CustomButton
+          btnType="button"
+          title={'Create a campaign'}
+          styles={'bg-[#1dc071]'}
+        />
+
         <Link to="/profile">
           <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
             <img
@@ -82,6 +88,14 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+
+          <div className="flex mx-4">
+            <CustomButton
+              btnType="button"
+              title={'Create a campaign'}
+              styles={'bg-[#1dc071]'}
+            />
+          </div>
         </div>
       </div>
     </div>
