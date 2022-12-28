@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ethers } from 'ethers';
 
 import { useStateContext } from '../context';
-import { money } from '../assets';
+import { createCampaign, money } from '../assets';
 import { FormField, CustomButton, Loader } from '../components';
 import { checkIfImage } from '../utils';
 
@@ -26,6 +26,26 @@ const CreateCampaign = () => {
         setForm({ ...form, [fieldName]: e.target.value })
     }
 
+    /**
+     * If the image exists, then set the loading state to true, create the campaign, set the loading
+     * state to false, and navigate to the home page.
+     */
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        checkIfImage(form.image, async (exists) => {
+            if (exists) {
+                setIsLoading(true)
+                await createCampaign({ ...form, target: ethers.utils.parseUnits(form.target, 8) })
+                setIsLoading(false)
+                navigate('/')
+            } else {
+                alert("Provide valid image URL")
+                setForm({ ...form, image: '' })
+            }
+        })
+    }
+
     return (
         <div className='bg-[#1c1c24] flex justify-center items-center flex-col rounded-[10px] sm:p-10 p-4'>
             {isLoading && <Loader />}
@@ -34,7 +54,7 @@ const CreateCampaign = () => {
                 <h1 className='font-epilogue font-bold sm:text-[25px] text-[18px] leading-[38px] text-white'>Start a Campaign</h1>
             </div>
 
-            <form className='w-full mt-[65px] flex flex-col gap-[30px]'>
+            <form onSubmit={handleSubmit} className='w-full mt-[65px] flex flex-col gap-[30px]'>
                 <div className='flex flex-wrap gap-[40px]'>
                     <FormField
                         labelName="Your Name *"
