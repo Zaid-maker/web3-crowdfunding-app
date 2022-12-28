@@ -19,6 +19,13 @@ const CreateCampaign = () => {
         image: ''
     });
 
+    /**
+     * When the user changes the value of a form field, update the form state with the new value.
+     */
+    const handleFormFieldChange = (fieldName, e) => {
+        setForm({ ...form, [fieldName]: e.target.value })
+    }
+
     return (
         <div className='bg-[#1c1c24] flex justify-center items-center flex-col rounded-[10px] sm:p-10 p-4'>
             {isLoading && <Loader />}
@@ -34,14 +41,14 @@ const CreateCampaign = () => {
                         placeholder="John Doe*"
                         inputType="text"
                         value={form.name}
-                        handleChange={{}}
+                        handleChange={(e) => handleFormFieldChange('name', e)}
                     />
                     <FormField
                         labelName="Campaign Title *"
                         placeholder="Write a title*"
                         inputType="text"
                         value={form.title}
-                        handleChange={{}}
+                        handleChange={(e) => handleFormFieldChange('title', e)}
                     />
                 </div>
 
@@ -50,6 +57,7 @@ const CreateCampaign = () => {
                     placeholder="Write your story"
                     isTextArea
                     value={form.description}
+                    handleChange={(e) => handleFormFieldChange('description', e)}
                 />
             </form>
         </div>
