@@ -1,7 +1,9 @@
+import React from 'react'
+
 const CampaignDetails = () => {
-    return (
-        <h1>Campaign Details</h1>
-    )
+  return (
+    <div>CampaignDetails</div>
+  )
 }
 
-export default CampaignDetails;
+export default CampaignDetails
