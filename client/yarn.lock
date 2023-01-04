@@ -1323,9 +1323,9 @@
     wagmi "^0.2.28"
 
 "@thirdweb-dev/sdk@^3":
-  version "3.6.7"
-  resolved "https://registry.yarnpkg.com/@thirdweb-dev/sdk/-/sdk-3.6.7.tgz#87a77397265dd1271c61f04ad3c6d4b088b47609"
-  integrity sha512-iUnXt4bYX7HFofEHdqEN6Z8h5qF65+uswqlJW2NKHW1zt+FPYYZENGfvgWe2+xf/7160MDyedyoMOaoK87JG7Q==
+  version "3.6.9"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/sdk/-/sdk-3.6.9.tgz#e846562a32d526af0f35eade940fd203cbf1fc62"
+  integrity sha512-SXlVo4EVetGUDSou82oWKz9/zWnIuvRnwGrcbN5yAEnqZXlmYqfzbheuSylFXqUkTkoEVwy4Gs9IWyKayWvTXA==
   dependencies:
     "@metaplex-foundation/js" "^0.17.6"
     "@metaplex-foundation/mpl-token-metadata" "^2.3.3"
