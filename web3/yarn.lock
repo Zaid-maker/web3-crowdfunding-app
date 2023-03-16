@@ -494,9 +494,9 @@
     tslib "^1.9.3"
 
 "@thirdweb-dev/contracts@^3":
-  version "3.2.9"
-  resolved "https://registry.yarnpkg.com/@thirdweb-dev/contracts/-/contracts-3.2.9.tgz#fc66a5d2db78a3e9b28b1c3f1d6cc03a029a17a4"
-  integrity sha512-6urQy8bKKj5Gn5De6VIhIDMg4dfOD2kjBra0ulohLVse2qIFvRWT3wkAHS1EuiQZJkD12cZmmLrQ/rl5NezjPw==
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/contracts/-/contracts-3.4.5.tgz#8ea3f5ebef2f92023f40cf1f9fcb1c953065b7eb"
+  integrity sha512-HHiNBXlctfJOF0lRMHYuJP1dYczkoCua8Wqf/FkORISytaF4LYWkKdhIirwy8QWG2MNvzOyRwSekWf2y1diPsw==
 
 "@types/async-eventemitter@^0.2.1":
   version "0.2.1"
